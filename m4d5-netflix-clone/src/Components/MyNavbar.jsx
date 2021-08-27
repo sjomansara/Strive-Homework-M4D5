@@ -1,8 +1,12 @@
 import { Navbar, Nav, Form, Button, NavDropdown, FormControl } from 'react-bootstrap'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faSearch } from '@fortawesome/free-solid-svg-icons'
+import { faBell } from '@fortawesome/free-solid-svg-icons'
+
 
 const MyNavbar = () => {
     return (
-        <Navbar bg="dark" expand="lg">
+        <Navbar bg="dark" expand="md">
         <Navbar.Brand href="#home">
         <img
                 alt=""
@@ -15,20 +19,29 @@ const MyNavbar = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#link">Link</Nav.Link>
-            <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-                <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
-            </NavDropdown>
+            <Nav.Link className="text-light" href="#">Home</Nav.Link>
+            <Nav.Link className="text-light" href="#">Tv Shows</Nav.Link>
+            <Nav.Link className="text-light" href="#">Movies</Nav.Link>
+            <Nav.Link className="text-light" href="#">Recently added</Nav.Link>
+            <Nav.Link className="text-light" href="#">My List</Nav.Link>
             </Nav>
-            <Form inline>
-            <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-            <Button variant="outline-success">Search</Button>
-            </Form>
+            <Nav className="">
+            <Nav.Link className="text-light" href="#"><FontAwesomeIcon icon={faSearch} /></Nav.Link>
+            <Nav.Link className="text-light" href="#">KIDS</Nav.Link>
+            <Nav.Link className="text-light" href="#"><FontAwesomeIcon icon={faBell} /></Nav.Link>
+            </Nav>
+            <NavDropdown 
+                title={<img
+                alt=""
+                src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/84c20033850498.56ba69ac290ea.png"
+                width="40"
+                height="auto"
+                className="d-inline-block align-top"
+            />} id="basic-nav-dropdown">
+                <NavDropdown.Item href="#action/3.1">Home</NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.2">Profile</NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.3">Settings</NavDropdown.Item>
+            </NavDropdown>
         </Navbar.Collapse>
         </Navbar>
     )
