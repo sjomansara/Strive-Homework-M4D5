@@ -20,7 +20,7 @@ const MyNavbar = () => {
         <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto">
             <Nav.Link className="text-light" href="#">Home</Nav.Link>
-            <Nav.Link className="text-light" href="#">Tv Shows</Nav.Link>
+            <Nav.Link className="text-light" href="#">TV Shows</Nav.Link>
             <Nav.Link className="text-light" href="#">Movies</Nav.Link>
             <Nav.Link className="text-light" href="#">Recently added</Nav.Link>
             <Nav.Link className="text-light" href="#">My List</Nav.Link>
