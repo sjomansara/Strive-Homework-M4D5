@@ -1,6 +1,6 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
-import RowComponent from "./components/RowComponent";
+import RowComponent from "./Components/RowComponent";
 import MyNavbar from './Components/MyNavbar'
 
 function App() {
