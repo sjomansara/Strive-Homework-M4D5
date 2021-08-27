@@ -1,5 +1,5 @@
 import "./App.css";
-import SingleMovie from "./components/SingleMovie";
+import SingleMovie from "./Components/SingleMovie";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import RowComponent from "./Components/RowComponent";
