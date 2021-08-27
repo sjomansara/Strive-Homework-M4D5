@@ -24,8 +24,8 @@ class SingleMovie extends React.Component {
   render() {
     return (
       <div>
-        <Card style={{ width: "18rem" }}>
-          <Card.Img variant="top" src={this.state.Poster} />
+        <Card id="netflixCard">
+          <Card.Img id="cardImg" variant="top" src={this.state.Poster} />
         </Card>
       </div>
     );
