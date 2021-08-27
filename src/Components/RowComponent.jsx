@@ -1,5 +1,5 @@
 import { Row, Col } from "react-bootstrap";
-// import SingleMovie from "./SingleMovie";
+import SingleMovie from "./SingleMovie";
 import React from "react";
 
 class RowComponent extends React.Component {
@@ -32,7 +32,7 @@ class RowComponent extends React.Component {
         <Row xs={1} md={4} lg={6} xl={8} className="mx-2">
           {this.state.movies.map((movie) => (
             <Col key={movie.imdbID} className="mb-3">
-              {/*<SingleMovie id={movie.imdbID} />*/}
+              <SingleMovie id={movie.imdbID} />
             </Col>
           ))}
         </Row>
