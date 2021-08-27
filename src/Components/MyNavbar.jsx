@@ -6,7 +6,7 @@ import { faBell } from '@fortawesome/free-solid-svg-icons'
 
 const MyNavbar = () => {
     return (
-        <Navbar bg="dark" expand="md">
+        <Navbar expand="md">
         <Navbar.Brand href="#home">
         <img
                 alt=""

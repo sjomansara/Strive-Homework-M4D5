@@ -15,8 +15,10 @@ class RowComponent extends React.Component {
       );
 
       if (response.ok) {
-        let movies = await response.json();
-        this.setState({ movies: movies.Search });
+        let jsonResponse = await response.json();
+        let movies = jsonResponse.Search
+        let moviesLimitedToSix = movies.splice(-6)
+        this.setState({ movies: moviesLimitedToSix });
       } else {
         console.log("error");
       }
@@ -28,8 +30,8 @@ class RowComponent extends React.Component {
   render() {
     return (
       <div>
-        <h4 className="text-black mb-2 mt-5">{this.props.movie}</h4>
-        <Row xs={1} md={4} lg={6} xl={8} className="mx-2">
+        <h4 id="sagaName" className="text-black ml-5 mt-4">{this.props.movie}</h4>
+        <Row xs={1} md={4} lg={6} xl={8} className="m-3">
           {this.state.movies.map((movie) => (
             <Col key={movie.imdbID} className="mb-3">
               <SingleMovie id={movie.imdbID} />
