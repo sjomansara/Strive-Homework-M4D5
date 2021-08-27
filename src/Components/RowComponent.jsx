@@ -5,6 +5,7 @@ import React from "react";
 class RowComponent extends React.Component {
   state = {
     movies: [],
+    searchQuery: "",
   };
 
   componentDidMount = async () => {
@@ -30,7 +31,23 @@ class RowComponent extends React.Component {
   render() {
     return (
       <div>
-        <h4 id="sagaName" className="text-black ml-5 mt-4">{this.props.movie}</h4>
+        {/*<Form>
+              <Form.Group
+                className="mb-3"
+                controlId="exampleForm.ControlInput1"
+              >
+                <Form.Label>Search</Form.Label>
+                <Form.Control
+                  type="text"
+                  placeholder="Search"
+                  value={this.state.searchQuery}
+                  onChange={(e) =>
+                    this.setState({ searchQuery: e.target.value })
+                  }
+                />
+              </Form.Group>
+            </Form>*/}
+        <h4 id="sagaName" className="ml-5 mt-4">{this.props.movie}</h4>
         <Row xs={1} md={4} lg={6} xl={8} className="m-3">
           {this.state.movies.map((movie) => (
             <Col key={movie.imdbID} className="mb-3">
