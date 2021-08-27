@@ -1,3 +1,5 @@
+import "./App.css";
+import SingleMovie from "./Components/SingleMovie";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import RowComponent from "./Components/RowComponent";
@@ -8,6 +10,7 @@ function App() {
     <div className="App">
       <MyNavbar />
       <RowComponent movie="Harry Potter" />
+      <SingleMovie id="tt1201607" />;
       <RowComponent movie="Lord Of The Rings" />
       <RowComponent movie="Mission Impossible" />
     </div>
