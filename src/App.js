@@ -3,12 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import MyNavbar from './Components/MyNavbar';
 import {
-  BrowserRouter as Router,
-  // Switch,
-  Route,
-  Switch,
-  // Link
-} from "react-router-dom";
+  BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import ShowDetails from "./Components/ShowDetails";
 import Home from "./Components/Home";
 
