@@ -4,7 +4,7 @@ import { Card, Spinner, Alert } from "react-bootstrap"
 const ShowDetails = (props) => {
 
     const [movieDetails, setMovieDetails] = useState({})
-    const [isLoading, setIsLoading] = useState(false)
+    const [isLoading, setIsLoading] = useState(true)
     const [isError, setIsError] = useState(false)
     
 
@@ -14,12 +14,12 @@ const ShowDetails = (props) => {
               "http://www.omdbapi.com/?apikey=2cd49fbb&i=" + props.id
             )
             if (response.ok) {
-              console.log("response ok!")
+              console.log("Response ok!")
             let details = await response.json()
             setMovieDetails(details)
             console.log(details)
             } else {
-              console.log('Server Error')
+              console.log("Server Error")
               setIsError(true)
               setIsLoading(false)
             }
