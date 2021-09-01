@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 import { Card, Spinner, Alert } from "react-bootstrap";
 
 class SingleMovie extends React.Component {
@@ -36,7 +36,6 @@ class SingleMovie extends React.Component {
 
   render() {
     return (
-      
       <div>
                  {
                     this.state.isLoading && 
@@ -48,9 +47,9 @@ class SingleMovie extends React.Component {
                         An error occurred!
                     </Alert>
                 }
-        <Card id="netflixCard">
+        <Link to="/ShowDetails"><Card id="netflixCard">
           <Card.Img id="cardImg" variant="top" src={this.state.Poster} />
-        </Card>
+        </Card></Link>
       </div>
     );
   }
